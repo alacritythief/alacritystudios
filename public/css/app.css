@@ -194,21 +194,38 @@ td,
 th {
   padding: 0;
 }
-.dogbox {
-  margin: 10px auto;
-  padding: 1em;
-  background-color: #ddd;
-  width: 400px;
-  height: 300px;
+html {
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-size: 16px;
 }
-.dogbox input[type=text] {
-  width: 95%;
+body {
+  background-color: #fff;
 }
-.doglogo {
-  margin: 10px auto;
-  padding: 1em 0 3em;
-  background-color: #ddd;
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+hr {
+  background-color: #000;
+  border: none;
+  color: #000;
+  height: 1px;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.placeholder {
+  padding-top: 15%;
   text-align: center;
-  width: 400px;
-  height: 300px;
 }

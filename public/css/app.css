@@ -204,11 +204,11 @@ body {
 a:link,
 a:visited,
 a:active {
-  color: #000;
+  color: #f00;
   text-decoration: none;
 }
 a:hover {
-  color: #f00;
+  text-decoration: underline;
 }
 h1,
 h2,
@@ -227,7 +227,7 @@ p {
   padding: 0;
 }
 .content {
-  margin-top: 100px;
+  margin: 3.5rem auto 0 auto;
 }
 .logo {
   font-family: "corner-store", "Times New Roman", Times, Serif;
@@ -237,6 +237,7 @@ p {
   border-bottom: 1px solid #000;
   list-style: none;
   margin: 0 auto;
+  max-height: 3rem;
   padding: 0 0 0.2rem 0;
   position: fixed;
   width: 100%;
@@ -247,6 +248,15 @@ p {
   padding-left: 2rem;
   display: inline-block;
   vertical-align: middle;
+}
+.nav li a:link,
+.nav li a:visited,
+.nav li a:active {
+  color: #000;
+  text-decoration: none;
+}
+.nav li a:hover {
+  color: #f00;
 }
 .placeholder {
   text-align: center;

@@ -25,8 +25,14 @@ mixin photo(post)
 
 block content
   .blog
+    //- h1.statement CODE + COMICS + ILLUSTRATION
+    
     for post in tumblr
       if (post.type == 'text')
         +text(post)
       else if (post.type == 'photo')
         +photo(post)
+
+  .center read more blog posts @ 
+    a(href="http://alacritystudios.tumblr.com") alacritystudios.tumblr.com
+    

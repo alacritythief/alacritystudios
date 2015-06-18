@@ -221,7 +221,7 @@ hr {
   border: none;
   color: #000;
   height: 1px;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 p {
   margin: 0;
@@ -230,13 +230,14 @@ p {
 .blog {
   margin: 0 auto;
   max-width: 800px;
-  padding: 1rem;
+  padding: 0;
 }
 .blog img {
   display: block;
   margin: 0 auto;
   max-width: 800px;
   padding: 0.5rem;
+  border-radius: 0.8rem;
 }
 .blog p {
   padding-top: 1rem;
@@ -251,6 +252,9 @@ p {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0.5rem;
+}
+.center {
+  text-align: center;
 }
 .content {
   margin: 3.5rem auto 0 auto;
@@ -284,7 +288,8 @@ p {
 .nav li a:hover {
   color: #f00;
 }
-.placeholder {
+.statement {
+  margin-bottom: 1rem;
   text-align: center;
 }
 .title {

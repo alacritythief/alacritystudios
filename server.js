@@ -1,6 +1,9 @@
 // Diamond Dog v1.0 Server
 // An Express.js & Node.js powered starter kit for apps and sites.
 
+// LOAD .ENV
+require('dotenv').load();
+
 // LIBRARIES
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -8,6 +11,7 @@ var cookieParser = require('cookie-parser');
 var csrf = require('csurf');
 var stylus = require('stylus');
 var nib = require('nib');
+var tumblr = require('tumblr.js');
 
 // EXPRESS APP
 var app = express();
@@ -36,12 +40,27 @@ app.use(cookieParser());
 // CSRF protection:
 app.use(csrf({ cookie: true }));
 
+// Load Tumblr client:
+var tumblr_client = tumblr.createClient({ consumer_key: process.env.TUMBLR_APIKEY });
+
 
 // ROUTES
 app.get('/', function(req, res) {
-  res.render('blog', {
-        message: "Placeholder Message"
-    });
+
+  tumblr_client.posts('alacritystudios.tumblr.com', { limit: 8, filter: 'html' }, function (err, data) {
+
+    if (data) {
+
+      console.log(data.posts.length);
+
+      res.render('blog', {
+            tumblr: data.posts
+        });
+    }
+
+  });
+
+
 });
 
 

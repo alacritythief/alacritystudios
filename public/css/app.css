@@ -199,7 +199,7 @@ html {
   font-size: 16px;
 }
 body {
-  background-color: #fff;
+  background-color: #eee;
 }
 a:link,
 a:visited,
@@ -217,14 +217,40 @@ h3 {
   padding: 0;
 }
 hr {
-  background-color: #000;
+  background-color: #ccc;
   border: none;
   color: #000;
   height: 1px;
+  margin: 2rem 0;
 }
 p {
   margin: 0;
   padding: 0;
+}
+.blog {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1rem;
+}
+.blog img {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0.5rem;
+}
+.blog p {
+  padding-top: 1rem;
+}
+.blog .tumblr-photo p:first-child {
+  text-align: center;
+}
+.blog .tumblr-title {
+  text-align: center;
+}
+.blog .tumblr-subtitle {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 .content {
   margin: 3.5rem auto 0 auto;

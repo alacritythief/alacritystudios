@@ -1,46 +1,32 @@
 extends ./layouts/base
 
+mixin text(post)
+  .tumblr-text
+    if (!post.reblog.tree_html == "")
+      h3.tumblr-title REBLOG: #{post.title} 
+      p.tumblr-subtitle #{post.date}
+    else
+      h3.tumblr-title #{post.title}
+      p.tumblr-subtitle #{post.date}
+    span!=post.body
+    hr
+
+mixin photo(post)
+  .tumblr-photo
+    if (!post.reblog.tree_html == "")
+      h3.tumblr-title REBLOG
+      p.tumblr-subtitle #{post.date}
+    else
+      h3.tumblr-title ART/PHOTO
+      p.tumblr-subtitle #{post.date}
+    img(src="#{post.photos[0].alt_sizes[0].url}")
+    span!=post.caption
+    hr
+
 block content
-  .placeholder
-    p alacritystudios
-    p Is currently being remade.
-    p
-    | You can view the 
-    a(href="http://alacritystudios.tumblr.com") old site 
-    | in the meantime.
-    p here
-    p is
-    p some
-    p test
-    p paragraph
-    p text
-    p here
-    p is
-    p some
-    p test
-    p paragraph
-    p text
-    p here
-    p is
-    p some
-    p test
-    p paragraph
-    p text
-    p here
-    p is
-    p some
-    p test
-    p paragraph
-    p text
-    p here
-    p is
-    p some
-    p test
-    p paragraph
-    p text
-    p here
-    p is
-    p some
-    p test
-    p paragraph
-    p text
+  .blog
+    for post in tumblr
+      if (post.type == 'text')
+        +text(post)
+      else if (post.type == 'photo')
+        +photo(post)

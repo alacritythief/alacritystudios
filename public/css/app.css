@@ -195,7 +195,7 @@ th {
   padding: 0;
 }
 html {
-  font-family: "Open-Sans", Helvetica, Arial, Sans-Serif;
+  font-family: "open-sans", Helvetica, Arial, Sans-Serif;
   font-size: 16px;
 }
 body {
@@ -225,7 +225,27 @@ p {
   margin: 0;
   padding: 0;
 }
+.logo {
+  font-family: "corner-store", "Times New Roman", Times, Serif;
+}
+.nav {
+  border-bottom: 1px solid #000;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 0 0.2rem 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+.nav li {
+  padding-left: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+}
 .placeholder {
   padding-top: 15%;
   text-align: center;
+}
+.title {
+  font-size: 2rem;
 }

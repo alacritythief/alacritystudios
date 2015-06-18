@@ -39,26 +39,12 @@ app.use(csrf({ cookie: true }));
 
 // ROUTES
 app.get('/', function(req, res) {
-  res.render('home', {
+  res.render('blog', {
         message: "Placeholder Message"
     });
 });
 
-// app.get('/form', function(req, res) {
-//   res.render('form', {
-//         csrfToken: req.csrfToken()
-//     });
-// });
-//
-// app.post('/form', function(req, res) {
-//   var payload = req.body;
-//
-//   res.render('result', {
-//       status: "POST SUCCESS",
-//       name: payload.name,
-//       saying: payload.saying
-//     });
-// });
+
 
 
 // PING ROUTES (for testing)

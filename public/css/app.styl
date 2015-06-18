@@ -14,10 +14,11 @@ body
   background-color #fff
 
 a:link, a:visited, a:active
+  color color-link
   text-decoration none
 
 a:hover
-  color #000
+  color color-hover
 
 h1, h2, h3
   margin 0
@@ -35,10 +36,14 @@ p
 
 // CLASSES
 
+.content
+  margin-top 100px
+
 .logo
   font-family "corner-store", "Times New Roman", Times, Serif
 
 .nav
+  background-color bg-background
   border-bottom 1px solid #000
   list-style none
   margin 0 auto
@@ -46,6 +51,7 @@ p
   position fixed
   width 100%
   text-align center
+  top 0
 
   li
     padding-left 2rem
@@ -53,7 +59,6 @@ p
     vertical-align middle
 
 .placeholder
-  padding-top 15%
   text-align center
 
 .title

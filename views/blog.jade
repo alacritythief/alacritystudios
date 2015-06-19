@@ -3,22 +3,26 @@ extends ./layouts/base
 mixin text(post)
   .tumblr-text
     if (!post.reblog.tree_html == "")
-      h3.tumblr-title REBLOG: #{post.title} 
-      p.tumblr-subtitle #{post.date}
+      h2.tumblr-title
+        a(href="#{post.post_url}") REBLOG: #{post.title} 
+      p.tumblr-subtitle #{moment(post.date).format("M/D/YY @ h:mm:ss A")}
     else
-      h3.tumblr-title #{post.title}
-      p.tumblr-subtitle #{post.date}
+      h2.tumblr-title 
+        a(href="#{post.post_url}") #{post.title}
+      p.tumblr-subtitle #{moment(post.date).format("M/D/YY @ h:mm:ss A")}
     span!=post.body
     hr
 
 mixin photo(post)
   .tumblr-photo
     if (!post.reblog.tree_html == "")
-      h3.tumblr-title REBLOG
-      p.tumblr-subtitle #{post.date}
+      h2.tumblr-title
+        a(href="#{post.post_url}") REBLOG:
+      p.tumblr-subtitle #{moment(post.date).format("M/D/YY @ h:mm:ss A")}
     else
-      h3.tumblr-title ART/PHOTO
-      p.tumblr-subtitle #{post.date}
+      h2.tumblr-title 
+       a(href="#{post.post_url}") ART/PHOTO
+      p.tumblr-subtitle #{moment(post.date).format("M/D/YY @ h:mm:ss A")}
     img(src="#{post.photos[0].alt_sizes[0].url}")
     span!=post.caption
     hr
@@ -30,7 +34,7 @@ block content
         +text(post)
       else if (post.type == 'photo')
         +photo(post)
+    .statement Read more blog posts @ 
+      a(href="http://alacritystudios.tumblr.com") alacritystudios.tumblr.com    
 
-  .statement Read more blog posts @ 
-    a(href="http://alacritystudios.tumblr.com") alacritystudios.tumblr.com
     

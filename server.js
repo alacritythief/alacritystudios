@@ -12,6 +12,7 @@ var csrf = require('csurf');
 var stylus = require('stylus');
 var nib = require('nib');
 var tumblr = require('tumblr.js');
+var moment = require('moment');
 
 // EXPRESS APP
 var app = express();
@@ -49,8 +50,9 @@ app.get('/', function(req, res) {
   tumblr_client.posts('alacritystudios.tumblr.com', { limit: 8, filter: 'html' }, function (err, data) {
     if (data) {
       res.render('blog', {
-            tumblr: data.posts
-        });
+        moment: moment,
+        tumblr: data.posts
+      });
     }
   });
 });

@@ -217,9 +217,9 @@ h3 {
   padding: 0;
 }
 hr {
-  background-color: #ccc;
-  border: none;
-  color: #000;
+  border: 0;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #888, #ccc);
   height: 1px;
   margin: 1.5rem 0;
 }
@@ -227,16 +227,31 @@ p {
   margin: 0;
   padding: 0;
 }
+.about {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1rem 0 0 0;
+}
+.about .photo {
+  border: 1px solid #ccc;
+  border-radius: 0.8rem;
+  float: right;
+  margin-left: 1rem;
+  max-width: 200px;
+}
+.about p {
+  padding-top: 1rem;
+}
 .blog {
   margin: 0 auto;
   max-width: 800px;
-  padding: 0;
+  padding: 1rem 0 0 0;
 }
 .blog img {
+  border: 1px solid #ccc;
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto 1rem auto;
   max-width: 800px;
-  padding: 0.5rem;
   border-radius: 0.8rem;
 }
 .blog p {
@@ -250,8 +265,8 @@ p {
 }
 .blog .tumblr-subtitle {
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding: 0;
 }
 .center {
   text-align: center;

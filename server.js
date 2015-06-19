@@ -46,25 +46,18 @@ var tumblr_client = tumblr.createClient({ consumer_key: process.env.TUMBLR_APIKE
 
 // ROUTES
 app.get('/', function(req, res) {
-
   tumblr_client.posts('alacritystudios.tumblr.com', { limit: 8, filter: 'html' }, function (err, data) {
-
     if (data) {
-
-      console.log(data.posts.length);
-
       res.render('blog', {
             tumblr: data.posts
         });
     }
-
   });
-
-
 });
 
-
-
+app.get('/about', function(req, res) {
+  res.render('about', {});
+});
 
 // PING ROUTES (for testing)
 app.get('/ping', function(req, res) {

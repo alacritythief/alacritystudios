@@ -7,27 +7,29 @@
 // TAGS
 
 html
-  font-family Helvetica, Arial, Sans-Serif
+  font-family "open-sans", Helvetica, Arial, Sans-Serif
   font-size 16px
 
 body
-  background-color #fff
+  background-color #eee
 
 a:link, a:visited, a:active
+  color color-link
   text-decoration none
 
 a:hover
-  color #000
+  text-decoration underline
 
 h1, h2, h3
   margin 0
   padding 0
 
 hr
-  background-color #000
-  border none
-  color #000
+  border 0
+  background #333
+  background-image linear-gradient(to right, #ccc, #888, #ccc)
   height 1px
+  margin 1.5rem 0
 
 p
   margin 0
@@ -35,6 +37,94 @@ p
 
 // CLASSES
 
-.placeholder
-  padding-top 15%
+.about
+  margin 0 auto
+  max-width 1000px
+  padding 1rem 0 0 0
+
+  .photo
+    border 1px solid #ccc
+    border-radius 0.8rem
+    float left
+    margin-left 1rem
+    max-width 300px
+
+  p
+    padding-top 1rem
+
+.blog
+  background-color #fff
+  border-left 1px dotted #ccc
+  border-right 1px dotted #ccc
+  margin 0 auto
+  max-width 750px
+  padding 1rem 3rem 0 3rem
+
+  img
+    border 1px solid #ccc
+    display block
+    margin 1rem auto 1rem auto
+    max-width 700px
+    border-radius 0.8rem
+
+  p
+    padding-top 1rem
+
+  .tumblr-photo
+    p:first-child
+      text-align center
+
+  .tumblr-title
+    text-align center
+
+  .tumblr-subtitle
+    text-align center
+    padding-bottom 0.5rem
+    padding 0
+
+.center
   text-align center
+
+.content
+  margin 3.2rem auto 0 auto
+
+.logo
+  font-family "corner-store", "Times New Roman", Times, Serif
+
+.nav
+  background-color bg-background
+  border-bottom 1px solid #000
+  list-style none
+  margin 0 auto
+  max-height 3rem
+  padding 0 0 0.2rem 0
+  position fixed
+  width 100%
+  text-align center
+  top 0
+
+  li:first-child
+    padding-left 4rem
+
+  li:nth-child(5)
+    padding-left 1rem
+
+  li
+    padding 0 1rem 0 1rem
+    display inline-block
+    vertical-align middle
+
+    a:link, a:visited, a:active
+      color color-nav-link
+      text-decoration none
+
+    a:hover
+      color color-nav-hover
+
+
+.statement
+  padding-bottom 1rem
+  text-align center
+
+.title
+  font-size 2rem

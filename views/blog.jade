@@ -5,11 +5,11 @@ mixin text(post)
     if (!post.reblog.tree_html == "")
       h2.tumblr-title
         a(href="#{post.post_url}") REBLOG: #{post.title} 
-      p.tumblr-subtitle #{moment(post.date).format("M/D/YY @ h:mm:ss A")}
+      p.tumblr-subtitle #{moment(post.date).format("MMMM Do YYYY @ h:mm:ss A")}
     else
       h2.tumblr-title 
         a(href="#{post.post_url}") #{post.title}
-      p.tumblr-subtitle #{moment(post.date).format("M/D/YY @ h:mm:ss A")}
+      p.tumblr-subtitle #{moment(post.date).format("MMMM Do YYYY @ h:mm:ss A")}
     span!=post.body
     hr
 
@@ -18,11 +18,11 @@ mixin photo(post)
     if (!post.reblog.tree_html == "")
       h2.tumblr-title
         a(href="#{post.post_url}") REBLOG:
-      p.tumblr-subtitle #{moment(post.date).format("M/D/YY @ h:mm:ss A")}
+      p.tumblr-subtitle #{moment(post.date).format("MMMM Do YYYY @ h:mm:ss A")}
     else
       h2.tumblr-title 
        a(href="#{post.post_url}") ART/PHOTO
-      p.tumblr-subtitle #{moment(post.date).format("M/D/YY @ h:mm:ss A")}
+      p.tumblr-subtitle #{moment(post.date).format("MMMM Do YYYY @ h:mm:ss A")}
     img(src="#{post.photos[0].alt_sizes[0].url}")
     span!=post.caption
     hr

@@ -229,17 +229,20 @@ p {
 }
 .about {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 600px;
   padding: 1rem 0 0 0;
 }
 .about .photo {
   border: 1px solid #ccc;
   border-radius: 0.8rem;
-  float: left;
-  margin-left: 1rem;
+  display: block;
+  margin: 0 auto;
   max-width: 300px;
+  text-align: center;
 }
 .about p {
+  text-align: justify;
+  text-justify: inter-word;
   padding-top: 1rem;
 }
 .blog {

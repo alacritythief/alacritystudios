@@ -62,16 +62,16 @@ app.get('/about', function(req, res) {
 });
 
 // PING ROUTES (for testing)
-app.get('/ping', function(req, res) {
-  console.log('PING received, GET');
-  res.send('PONG - Method: GET');
-});
-
-app.post('/ping', function(req, res) {
-  console.log('PING received, POST');
-  console.log(req.body);
-  res.send('PONG - Method: POST');
-});
+// app.get('/ping', function(req, res) {
+//   console.log('PING received, GET');
+//   res.send('PONG - Method: GET');
+// });
+//
+// app.post('/ping', function(req, res) {
+//   console.log('PING received, POST');
+//   console.log(req.body);
+//   res.send('PONG - Method: POST');
+// });
 
 
 // SERVER SETTINGS

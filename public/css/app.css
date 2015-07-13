@@ -252,7 +252,7 @@ p {
 .about {
   margin: 0 auto;
   max-width: 600px;
-  padding: 1rem 0 0 0;
+  padding: 1rem 0 1rem 0;
 }
 .about .photo {
   border: 1px solid #ccc;
@@ -261,6 +261,16 @@ p {
   margin: 0 auto;
   max-width: 300px;
   text-align: center;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .about .photo {
+    max-width: 90%;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .about .photo {
+    max-width: 90%;
+  }
 }
 .about p {
   text-align: justify;
@@ -408,6 +418,39 @@ p {
     padding-top: 0.1rem;
     padding-right: 0.5rem;
   }
+}
+.nav-mobile {
+  background-color: #fff;
+  display: none;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav-mobile {
+    position: absolute;
+    top: 3.1rem;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav-mobile {
+    position: absolute;
+    float: right;
+  }
+}
+.nav-mobile li:first-child {
+  border-top: none;
+  margin-top: 0;
+}
+.nav-mobile li {
+  border-top: 1px solid #ccc;
+  border-botttom: 1px solid #ccc;
+  padding: 0.5rem 0;
+}
+.nav-mobile li:last-child {
+  border-bottom: 1px solid #ccc;
 }
 .statement {
   padding-bottom: 1rem;

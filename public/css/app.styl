@@ -54,7 +54,7 @@ p
 .about
   margin 0 auto
   max-width 600px
-  padding 1rem 0 0 0
+  padding 1rem 0 1rem 0
 
   .photo
     border 1px solid #ccc
@@ -63,6 +63,12 @@ p
     margin 0 auto
     max-width 300px
     text-align center
+
+    @media iphone4
+      max-width 90%
+
+    @media iphone5s
+      max-width 90%
 
   p
     text-align justify
@@ -190,6 +196,35 @@ p
       font-size 1.8rem
       padding-top 0.1rem
       padding-right .5rem
+
+.nav-mobile
+    background-color #fff
+    display none
+    list-style none
+    margin 0 auto
+    padding 0
+    width 100%
+    text-align center
+
+    @media iphone4
+      position absolute
+      top 3.1rem
+
+    @media iphone5s
+      position absolute
+      float right
+
+    li:first-child
+      border-top none
+      margin-top 0
+
+    li
+      border-top 1px solid #ccc
+      border-botttom 1px solid #ccc
+      padding 0.5rem 0
+
+    li:last-child
+      border-bottom 1px solid #ccc
 
 .statement
   padding-bottom 1rem

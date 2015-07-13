@@ -197,9 +197,11 @@ th {
 html {
   font-family: "open-sans", Helvetica, Arial, Sans-Serif;
   font-size: 16px;
+  height: 100%;
 }
 body {
   background-color: #eee;
+  height: 100%;
 }
 a:link,
 a:visited,
@@ -249,6 +251,7 @@ p {
   background-color: #fff;
   border-left: 1px dotted #ccc;
   border-right: 1px dotted #ccc;
+  height: 100%;
   margin: 0 auto;
   max-width: 750px;
   padding: 1rem 3rem 0 3rem;
@@ -279,6 +282,7 @@ p {
 }
 .content {
   margin: 3.2rem auto 0 auto;
+  height: 100%;
 }
 .logo {
   font-family: "corner-store", "Times New Roman", Times, Serif;

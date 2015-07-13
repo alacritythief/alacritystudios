@@ -11,9 +11,21 @@ html
   font-size 16px
   height 100%
 
+  @media iphone4
+    font-size 14px
+
+  @media iphone5s
+    font-size 14px
+
 body
   background-color #eee
   height 100%
+
+  @media iphone4
+    background-color #fff
+
+  @media iphone5s
+    background-color #fff
 
 a:link, a:visited, a:active
   color color-link
@@ -66,12 +78,27 @@ p
   max-width 750px
   padding 1rem 3rem 0 3rem
 
+  @media iphone4
+    border none
+    padding 0
+    width 90%
+
+  @media iphone5s
+    padding 0
+    width 90%
+
   img
     border 1px solid #ccc
     display block
     margin 1rem auto 1rem auto
     max-width 700px
     border-radius 0.8rem
+
+    @media iphone4
+      max-width 100%
+
+    @media iphone5s
+      max-width 100%
 
   p
     padding-top 1rem
@@ -121,6 +148,14 @@ p
     display inline-block
     vertical-align middle
 
+    @media iphone4
+      display none
+      padding 0
+
+    @media iphone5s
+      display none
+      padding 0
+
     a:link, a:visited, a:active
       color color-nav-link
       text-decoration none
@@ -128,6 +163,33 @@ p
     a:hover
       color color-nav-hover
 
+  li.logo.title
+    @media iphone4
+      display inline-block
+      font-size 1.8rem
+      padding-left 2rem
+
+    @media iphone5s
+      display inline-block
+      font-size 1.8rem
+      padding-left 2rem
+
+  li.hamburger
+    display none
+
+    @media iphone4
+      display inline-block
+      float right
+      font-size 1.8rem
+      padding-top 0.1rem
+      padding-right .5rem
+
+    @media iphone5s
+      display inline-block
+      float right
+      font-size 1.8rem
+      padding-top 0.1rem
+      padding-right .5rem
 
 .statement
   padding-bottom 1rem

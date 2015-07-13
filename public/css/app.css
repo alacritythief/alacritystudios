@@ -199,9 +199,29 @@ html {
   font-size: 16px;
   height: 100%;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    font-size: 14px;
+  }
+}
 body {
   background-color: #eee;
   height: 100%;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    background-color: #fff;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    background-color: #fff;
+  }
 }
 a:link,
 a:visited,
@@ -256,12 +276,35 @@ p {
   max-width: 750px;
   padding: 1rem 3rem 0 3rem;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .blog {
+    border: none;
+    padding: 0;
+    width: 90%;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .blog {
+    padding: 0;
+    width: 90%;
+  }
+}
 .blog img {
   border: 1px solid #ccc;
   display: block;
   margin: 1rem auto 1rem auto;
   max-width: 700px;
   border-radius: 0.8rem;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .blog img {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .blog img {
+    max-width: 100%;
+  }
 }
 .blog p {
   padding-top: 1rem;
@@ -310,6 +353,18 @@ p {
   display: inline-block;
   vertical-align: middle;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav li {
+    display: none;
+    padding: 0;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav li {
+    display: none;
+    padding: 0;
+  }
+}
 .nav li a:link,
 .nav li a:visited,
 .nav li a:active {
@@ -318,6 +373,41 @@ p {
 }
 .nav li a:hover {
   color: #f00;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav li.logo.title {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding-left: 2rem;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav li.logo.title {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding-left: 2rem;
+  }
+}
+.nav li.hamburger {
+  display: none;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav li.hamburger {
+    display: inline-block;
+    float: right;
+    font-size: 1.8rem;
+    padding-top: 0.1rem;
+    padding-right: 0.5rem;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav li.hamburger {
+    display: inline-block;
+    float: right;
+    font-size: 1.8rem;
+    padding-top: 0.1rem;
+    padding-right: 0.5rem;
+  }
 }
 .statement {
   padding-bottom: 1rem;

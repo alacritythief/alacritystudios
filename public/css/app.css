@@ -353,7 +353,7 @@ p {
   top: 0;
 }
 .nav li:first-child {
-  padding-left: 4rem;
+  padding-left: 1.5rem;
 }
 .nav li:nth-child(5) {
   padding-left: 1rem;
